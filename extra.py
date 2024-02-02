@@ -53,7 +53,6 @@ service = Service(executable_path="C:\chromedriver-win64\chromedriver.exe")
 options = Options()
 options.add_experimental_option("debuggerAddress", "127.0.0.1:9030")
 driver = webdriver.Chrome(service=service, options=options)
-# driver.get('https://www.sparepartworld.com/laptop-spare-parts/displays/char-l')
 
 wb = Workbook()
 sheet = wb.active
@@ -61,7 +60,7 @@ item = ['Product Link', 'Title', 'Price', 'Item Number', 'Sub-Partnumbers', 'Siz
 for i in range(1, 20):
     sheet.cell(row = 1, column = i).value = item[i-1]
 
-with open('links.json', 'r') as file:
+with open('1001-2000.json', 'r') as file:
     links = json.load(file)
 
 start_row = 2
