@@ -61,7 +61,7 @@ for i in range(1, 20):
     sheet.cell(row = 1, column = i).value = item[i-1]
 
 start_row = 2
-for id in range(1, 443):
+for id in range(1, 44):
     driver.get(f'https://www.sparepartworld.com/laptop-spare-parts/displays?page={id}')
     product_items = Find_Element(driver, By.CLASS_NAME, 'product-listing-list').find_elements(By.CLASS_NAME, "product-item")
     output = []
